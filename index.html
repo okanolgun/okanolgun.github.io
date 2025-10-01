@@ -75,10 +75,11 @@
     [data-bs-theme="dark"] .bg-light, [data-bs-theme="dark"] .bg-white { background-color: var(--bg) !important; }
     [data-bs-theme="dark"] .text-dark { color: var(--text) !important; }
     /* Hero image container helper */
-    .hero-img { max-width: 420px; width: 100%; height: auto; border-radius: 20px; box-shadow: var(--shadow); }
+    .hero-img { max-width: 420px; width: 100%; height: auto; border-radius: 50%; box-shadow: var(--shadow); }
+    .hero-quote { color: var(--muted); font-style: italic; margin-top: .75rem; }
   </style>
 </head>
-<body data-bs-theme="light">
+<body data-bs-theme="dark">
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
     <div class="container">
@@ -100,11 +101,6 @@
               <button id="langTR" class="btn btn-sm btn-ghost">TR</button>
             </div>
           </li>
-          <li class="nav-item ms-2">
-            <button id="themeToggle" class="btn btn-sm btn-ghost" aria-label="Toggle theme">
-              <i class="bi bi-moon-stars"></i>
-            </button>
-          </li>
         </ul>
       </div>
     </div>
@@ -119,15 +115,16 @@
           <h1 id="hero-title" class="fw-bold display-4" style="letter-spacing:-0.02em;">Building reliable AI for real-world impact.</h1>
           <p id="hero-sub" class="lead mt-3" style="max-width:760px;">Production-grade machine learning across medical imaging, cybersecurity, fintech, and energy. From research to deployment with measurable outcomes.</p>
           <div class="mt-4">
-            <a id="btn-cv-en" href="/Okan_Olgun resume.pdf" target="_blank" class="btn btn-brand btn-lg me-2">Download CV (EN)</a>
-            <a id="btn-cv-tr" href="/Okan_Olgun ozgecmis.pdf" target="_blank" class="btn btn-ghost btn-lg me-2">Download CV (TR)</a>
+            <a id="btn-cv-en" href="/Okan_Olgun_resume.pdf" target="_blank" class="btn btn-brand btn-lg me-2">Download CV (EN)</a>
+            <a id="btn-cv-tr" href="/Okan_Olgun_ozgecmis.pdf" target="_blank" class="btn btn-ghost btn-lg me-2">Download CV (TR)</a>
             <a href="https://github.com/okanolgun" class="btn btn-ghost btn-lg me-2"><i class="bi bi-github me-1"></i> GitHub</a>
             <a href="https://www.linkedin.com/in/okanolgun06/" class="btn btn-ghost btn-lg me-2"><i class="bi bi-linkedin me-1"></i> LinkedIn</a>
             <a href="https://medium.com/@okanolgun980" class="btn btn-ghost btn-lg"><i class="bi bi-medium me-1"></i> Medium</a>
           </div>
         </div>
         <div class="col-lg-6 text-center">
-          <img src="/avatar.jpg" alt="Portrait of Okan Olgun" class="hero-img" style="object-fit: contain;" onerror="this.style.display='none'" />
+          <img src="/avatar.jpg" alt="Portrait of Okan Olgun" class="hero-img" style="object-fit: cover;" onerror="this.style.display='none'" />
+          <div id="hero-quote" class="hero-quote">“AI will be the next revolution; I am coding it.”</div>
         </div>
       </div>
     </div>
@@ -306,22 +303,54 @@
   <section id="experience" class="py-5 bg-white">
     <div class="container">
       <h2 id="experience-title" class="section-title">Experience</h2>
-      <div class="timeline mt-4">
-        <div class="timeline-item">
-          <h6 class="mb-1">AI Engineer – IsıTech <span class="text-muted">(2025–present)</span></h6>
-          <p class="mb-0 text-muted">MRI segmentation, NLP for diagnosis coding, TÜBİTAK 1501 projects.</p>
+      <div class="accordion mt-4" id="expAccordion">
+        <div class="accordion-item bg-transparent border rounded-3 mb-2">
+          <h2 class="accordion-header" id="exp2025h">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exp2025" aria-expanded="false" aria-controls="exp2025">
+              2025–Present • AI Engineer – IsıTech
+            </button>
+          </h2>
+          <div id="exp2025" class="accordion-collapse collapse" aria-labelledby="exp2025h" data-bs-parent="#expAccordion">
+            <div class="accordion-body">
+              MRI segmentation pipelines (MONAI, SynthSeg), diagnosis code NLP, TÜBİTAK 1501 projeleri; veri hattı, değerlendirme ve ürünleştirme sorumlulukları.
+            </div>
+          </div>
         </div>
-        <div class="timeline-item">
-          <h6 class="mb-1">Data Scientist – Mono Payments <span class="text-muted">(2024)</span></h6>
-          <p class="mb-0 text-muted">Sales forecasting, proxy data modeling, ML integration into web apps.</p>
+        <div class="accordion-item bg-transparent border rounded-3 mb-2">
+          <h2 class="accordion-header" id="exp2024h">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exp2024" aria-expanded="false" aria-controls="exp2024">
+              2024 • Data Scientist – Mono Payments
+            </button>
+          </h2>
+          <div id="exp2024" class="accordion-collapse collapse" aria-labelledby="exp2024h" data-bs-parent="#expAccordion">
+            <div class="accordion-body">
+              Satış tahminleme, proxy veri modelleme, TF‑IDF + RandomForest; ML çözümlerinin web uygulamalarına entegrasyonu.
+            </div>
+          </div>
         </div>
-        <div class="timeline-item">
-          <h6 class="mb-1">Data Analyst Intern – TAM Finans <span class="text-muted">(2023)</span></h6>
-          <p class="mb-0 text-muted">Real-time branch analytics and financial impact reporting.</p>
+        <div class="accordion-item bg-transparent border rounded-3 mb-2">
+          <h2 class="accordion-header" id="exp2023h">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exp2023" aria-expanded="false" aria-controls="exp2023">
+              2023 • Data Analyst Intern – TAM Finans
+            </button>
+          </h2>
+          <div id="exp2023" class="accordion-collapse collapse" aria-labelledby="exp2023h" data-bs-parent="#expAccordion">
+            <div class="accordion-body">
+              Gerçek zamanlı şube analitiği, finansal etki raporlama, dashboard ve veri akışlarının otomasyonu.
+            </div>
+          </div>
         </div>
-        <div class="timeline-item">
-          <h6 class="mb-1">Research – Data-driven Energy Systems <span class="text-muted">(2024–)</span></h6>
-          <p class="mb-0 text-muted">Research with Dr. Küfeoğlu (UK Gov) on analytics for energy systems.</p>
+        <div class="accordion-item bg-transparent border rounded-3">
+          <h2 class="accordion-header" id="expResh">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#expRes" aria-expanded="false" aria-controls="expRes">
+              2024– • Research – Data-driven Energy Systems
+            </button>
+          </h2>
+          <div id="expRes" class="accordion-collapse collapse" aria-labelledby="expResh" data-bs-parent="#expAccordion">
+            <div class="accordion-body">
+              Dr. Küfeoğlu ile enerji sistemlerinde veri odaklı analizler; veri toplama, veri temizleme ve modelleme.
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -406,13 +435,13 @@
     const i18n = {
       en: {
         nav: { about: 'About', skills: 'Skills', projects: 'Projects', experience: 'Experience', writing: 'Writing', contact: 'Contact' },
-        hero: { badge: 'AI Engineer • Data Scientist', title: 'Building reliable AI for real-world impact.', sub: 'Production-grade machine learning across medical imaging, cybersecurity, fintech, and energy. From research to deployment with measurable outcomes.', btnEn: 'Download CV (EN)', btnTr: 'Download CV (TR)' },
+        hero: { badge: 'AI Engineer • Data Scientist', title: 'Building reliable AI for real-world impact.', sub: 'Production-grade machine learning across medical imaging, cybersecurity, fintech, and energy. From research to deployment with measurable outcomes.', btnEn: 'Download CV (EN)', btnTr: 'Download CV (TR)', quote: '“AI will be the next revolution; I am coding it.”' },
         sections: { about: 'About', skills: 'Skills', projects: 'Projects', experience: 'Experience', writing: 'Writing', contact: 'Contact' },
         aboutText: "I’m an <b>AI Engineer</b> and <b>Data Scientist</b> focused on building systems that are <b>accurate, robust, and shippable</b>. My recent work includes brain MRI segmentation pipelines (MONAI, SynthSeg), a modular cybersecurity platform with AI-driven detection, and data products for forecasting and optimization. I care about clean engineering, observability, and product impact."
       },
       tr: {
         nav: { about: 'Hakkımda', skills: 'Yetenekler', projects: 'Projeler', experience: 'Deneyim', writing: 'Yazılar', contact: 'İletişim' },
-        hero: { badge: 'Yapay Zekâ Mühendisi • Veri Bilimci', title: 'Gerçek dünyada etkisi olan güvenilir yapay zekâ.', sub: 'Medikal görüntüleme, siber güvenlik, finans ve enerjide üretim seviyesinde makine öğrenmesi. Araştırmadan canlı ortama, ölçülebilir sonuçlarla.', btnEn: 'CV İndir (EN)', btnTr: 'CV İndir (TR)' },
+        hero: { badge: 'Yapay Zekâ Mühendisi • Veri Bilimci', title: 'Gerçek dünyada etkisi olan güvenilir yapay zekâ.', sub: 'Medikal görüntüleme, siber güvenlik, finans ve enerjide üretim seviyesinde makine öğrenmesi. Araştırmadan canlı ortama, ölçülebilir sonuçlarla.', btnEn: 'CV İndir (EN)', btnTr: 'CV İndir (TR)', quote: '“Yapay zekâ yeni bir devrim olacak; ben onu kodluyorum.”' },
         sections: { about: 'Hakkımda', skills: 'Yetenekler', projects: 'Projeler', experience: 'Deneyim', writing: 'Yazılar', contact: 'İletişim' },
         aboutText: "<b>Yapay Zekâ Mühendisi</b> ve <b>Veri Bilimci</b> olarak <b>doğru, dayanıklı ve ürünleştirilebilir</b> sistemler geliştiriyorum. Son işlerimde beyin MRI segmentasyonu (MONAI, SynthSeg), yapay zekâ destekli modüler siber güvenlik platformu ve tahmin/optimizasyon odaklı veri ürünleri yer alıyor. Temiz mühendislik, gözlemlenebilirlik ve ürün etkisine önem veriyorum."
       }
@@ -437,6 +466,7 @@
       document.getElementById('writing-title').textContent = dict.sections.writing;
       document.getElementById('contact-title').textContent = dict.sections.contact;
       document.getElementById('about-text').innerHTML = dict.aboutText;
+      document.getElementById('hero-quote').textContent = dict.hero.quote;
       localStorage.setItem('lang', lang);
       document.getElementById('langEN').classList.toggle('btn-brand', lang==='en');
       document.getElementById('langTR').classList.toggle('btn-brand', lang==='tr');
