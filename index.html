@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Okan Olgun – Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light text-dark">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#hero">Okan Olgun</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#writing">Writing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="d-flex align-items-center text-center bg-white" style="min-height:100vh;">
+    <div class="container">
+      <h1 class="fw-bold">Okan Olgun</h1>
+      <h3 class="text-muted">Data Scientist • AI Engineer</h3>
+      <p class="lead mt-3">Medikal görüntüleme, finansal tahminleme, enerji analitiği ve siber güvenlik projelerinde yapay zekâ çözümleri.</p>
+      <div class="mt-4">
+        <a href="/OkanOlgun_CV.pdf" class="btn btn-primary">Download CV</a>
+        <a href="https://github.com/okanolgun" class="btn btn-dark">GitHub</a>
+        <a href="https://www.linkedin.com/in/okanolgun06/" class="btn btn-info">LinkedIn</a>
+        <a href="https://medium.com/@okanolgun980" class="btn btn-secondary">Medium</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-5 bg-light">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I am an AI Engineer and Data Scientist passionate about transforming research into deployable solutions. My focus areas include brain MRI segmentation, digital health platforms, financial forecasting, and energy analytics. I thrive on bridging advanced ML with real-world applications and productization.</p>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="py-5 bg-white">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul>
+        <li><b>ML/DL:</b> PyTorch, MONAI, scikit-learn, XGBoost</li>
+        <li><b>Medical Imaging:</b> 3D U-Net, DynUNet, SynthSeg, 3D Slicer</li>
+        <li><b>NLP/ASR:</b> Text classification, Speech recognition</li>
+        <li><b>Backend:</b> Python, SQL, Flask, Airflow</li>
+        <li><b>Deployment:</b> Gradio, Hugging Face, Docker</li>
+        <li><b>Other:</b> Unity, Blender, React (basic)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="py-5 bg-light">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">ShadowEye – Cybersecurity Platform</h5>
+              <p class="card-text">Next-gen modular cybersecurity platform integrating AI-powered threat detection, fraud message classification (ROC-AUC 92.7%), and OWASP-compliant vulnerability scanning.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Brain MRI Tumor Segmentation</h5>
+              <p class="card-text">3D U-Net & DynUNet with MONAI for BraTS 2021 dataset. Patch-based training, balanced loss functions, modality dropout and SynthSeg integration.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Neuridian – Digital Neuropsychology Platform</h5>
+              <p class="card-text">Tele-health platform with multilingual ASR+NLP scoring, VR avatar modules, and GDPR-compliant clinical data management.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Fraud Detection Pipeline</h5>
+              <p class="card-text">Proxy data + ML for customer behavior modeling. TF-IDF + RandomForest with GridSearchCV, integrated into web applications.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Parking Spot Detector</h5>
+              <p class="card-text">OpenCV-based real-time parking spot classification system using masks. Detailed steps published on Medium.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Intel Image Classifier</h5>
+              <p class="card-text">FastAI + ResNet on Intel dataset with Gradio + HuggingFace deployment. Step-by-step blog available.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="py-5 bg-white">
+    <div class="container">
+      <h2>Experience</h2>
+      <ul>
+        <li><b>IsıTech (2025–)</b> – AI Engineer: MRI segmentation, NLP for diagnosis codes, TUBITAK 1501 projects.</li>
+        <li><b>Mono Payments (2024)</b> – Data Scientist: Sales forecasting, proxy data modeling, web ML integration.</li>
+        <li><b>TAM Finans (2023)</b> – Data Analyst Intern: Real-time branch data analysis, financial impact reporting.</li>
+        <li><b>Research Project (2024–)</b> – Data-driven Energy Systems under Dr. Küfeoğlu (UK Gov).</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- WRITING -->
+  <section id="writing" class="py-5 bg-light">
+    <div class="container">
+      <h2>Writing</h2>
+      <ul>
+        <li><a href="https://medium.com/@okanolgun980">Intel Image Classification – FastAI + Gradio</a></li>
+        <li><a href="https://medium.com/@okanolgun980">Parking Spot Detection – OpenCV</a></li>
+        <li><a href="https://medium.com/@okanolgun980">Speech Recognition Pipeline</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-5 bg-white">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:oknolgn28@gmail.com">oknolgn28@gmail.com</a></p>
+      <p>Location: Ankara, Turkey</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/okanolgun06/">okanolgun06</a></p>
+      <p>GitHub: <a href="https://github.com/okanolgun">okanolgun</a></p>
+      <p>Medium: <a href="https://medium.com/@okanolgun980">@okanolgun980</a></p>
+    </div>
+  </section>
+
+  <footer class="text-center py-3 bg-light">
+    <p class="mb-0">© 2025 Okan Olgun</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
