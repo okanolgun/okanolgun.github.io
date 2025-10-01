@@ -3,10 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Okan Olgun – Portfolio</title>
+  <title>Okan Olgun – AI Engineer & Data Scientist</title>
+  <meta name="description" content="AI Engineer & Data Scientist building production-grade AI for medical imaging, fintech, energy analytics, and cybersecurity.">
+  <meta name="theme-color" content="#0ea5e9">
+  <meta property="og:title" content="Okan Olgun – AI Engineer & Data Scientist">
+  <meta property="og:description" content="Portfolio showcasing work in medical imaging, AI platforms, and data products.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://your-domain.example/">
+  <meta property="og:image" content="/assets/portrait.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand: #0ea5e9;
+      --brand-2: #8b5cf6;
+      --text: #0f172a;
+      --muted: #64748b;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --border: #e2e8f0;
+      --shadow: 0 10px 30px rgba(2, 6, 23, 0.06);
+    }
+    [data-bs-theme="dark"] {
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --bg: #0b1220;
+      --card: #0f172a;
+      --border: #1e293b;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    }
+    html, body { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); }
+    .navbar { backdrop-filter: saturate(180%) blur(8px); }
+    .navbar.bg-white { background: rgba(255,255,255,0.8) !important; border-bottom: 1px solid var(--border); }
+    [data-bs-theme="dark"] .navbar.bg-white { background: rgba(15,23,42,0.7) !important; }
+    .nav-link { color: var(--muted) !important; }
+    .nav-link.active, .nav-link:hover { color: var(--text) !important; }
+    .btn-brand { background: linear-gradient(135deg, var(--brand), var(--brand-2)); border: none; }
+    .btn-brand:hover { filter: brightness(1.05); }
+    .btn-ghost { border: 1px solid var(--border); color: var(--text); background: transparent; }
+    .btn-ghost:hover { background: var(--card); }
+    .gradient-hero {
+      background: radial-gradient(1200px 600px at 50% -10%, rgba(14,165,233,0.25), rgba(139,92,246,0.15) 40%, rgba(14,165,233,0) 70%),
+                  linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0));
+    }
+    [data-bs-theme="dark"] .gradient-hero {
+      background: radial-gradient(1200px 600px at 50% -10%, rgba(14,165,233,0.18), rgba(139,92,246,0.12) 40%, rgba(14,165,233,0) 70%),
+                  linear-gradient(180deg, rgba(15,23,42,0.6), rgba(15,23,42,0));
+    }
+    section { scroll-margin-top: 80px; }
+    .section-title { font-weight: 800; letter-spacing: -0.02em; }
+    .lead { color: var(--muted); }
+    .card { background: var(--card); border: 1px solid var(--border); box-shadow: var(--shadow); }
+    .card:hover { transform: translateY(-2px); transition: .2s ease; }
+    .tag { display: inline-block; padding: 0.35rem 0.6rem; border-radius: 999px; background: rgba(14,165,233,0.08); color: var(--text); border: 1px solid var(--border); font-size: .8rem; margin-right: .35rem; margin-bottom: .35rem; }
+    .badge-soft { background: rgba(148,163,184,0.15); color: var(--text); border: 1px solid var(--border); }
+    .skill-badge { padding: .5rem .75rem; border-radius: 10px; font-weight: 500; }
+    .timeline { position: relative; }
+    .timeline::before { content: ""; position: absolute; left: 10px; top: 0; bottom: 0; width: 2px; background: var(--border); }
+    .timeline-item { position: relative; padding-left: 2.5rem; margin-bottom: 1.5rem; }
+    .timeline-item::before { content: ""; position: absolute; left: 3px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: var(--brand); box-shadow: 0 0 0 4px rgba(14,165,233,0.15); }
+    .footer { border-top: 1px solid var(--border); }
+    .back-to-top { position: fixed; right: 16px; bottom: 16px; z-index: 1030; display: none; }
+  </style>
 </head>
-<body class="bg-light text-dark">
+<body data-bs-theme="light">
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
     <div class="container">
@@ -22,22 +89,35 @@
           <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
           <li class="nav-item"><a class="nav-link" href="#writing">Writing</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-2">
+            <button id="themeToggle" class="btn btn-sm btn-ghost" aria-label="Toggle theme">
+              <i class="bi bi-moon-stars"></i>
+            </button>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- HERO -->
-  <section id="hero" class="d-flex align-items-center text-center bg-white" style="min-height:100vh;">
+  <section id="hero" class="d-flex align-items-center gradient-hero" style="min-height:100vh;">
     <div class="container">
-      <h1 class="fw-bold">Okan Olgun</h1>
-      <h3 class="text-muted">Data Scientist • AI Engineer</h3>
-      <p class="lead mt-3">Medikal görüntüleme, finansal tahminleme, enerji analitiği ve siber güvenlik projelerinde yapay zekâ çözümleri.</p>
-      <div class="mt-4">
-        <a href="/OkanOlgun_CV.pdf" class="btn btn-primary">Download CV</a>
-        <a href="https://github.com/okanolgun" class="btn btn-dark">GitHub</a>
-        <a href="https://www.linkedin.com/in/okanolgun06/" class="btn btn-info">LinkedIn</a>
-        <a href="https://medium.com/@okanolgun980" class="btn btn-secondary">Medium</a>
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6 text-center text-lg-start">
+          <span class="badge badge-soft mb-3">AI Engineer • Data Scientist</span>
+          <h1 class="fw-bold display-4" style="letter-spacing:-0.02em;">Building reliable AI for real-world impact.</h1>
+          <p class="lead mt-3" style="max-width:760px;">Production-grade machine learning across medical imaging, cybersecurity, fintech, and energy. From research to deployment with measurable outcomes.</p>
+          <div class="mt-4">
+            <a href="eski converter kodları/Okan_Olgun resume.pdf" target="_blank" class="btn btn-brand btn-lg me-2">Download CV (EN)</a>
+            <a href="eski converter kodları/Okan_Olgun özgeçmiş.pdf" target="_blank" class="btn btn-ghost btn-lg me-2">Download CV (TR)</a>
+            <a href="https://github.com/okanolgun" class="btn btn-ghost btn-lg me-2"><i class="bi bi-github me-1"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/okanolgun06/" class="btn btn-ghost btn-lg me-2"><i class="bi bi-linkedin me-1"></i> LinkedIn</a>
+            <a href="https://medium.com/@okanolgun980" class="btn btn-ghost btn-lg"><i class="bi bi-medium me-1"></i> Medium</a>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="/assets/portrait.jpg" alt="Portrait of Okan Olgun" class="rounded-circle shadow" style="max-width: 320px; width: 80%; height: auto; object-fit: cover;" />
+        </div>
       </div>
     </div>
   </section>
@@ -45,36 +125,101 @@
   <!-- ABOUT -->
   <section id="about" class="py-5 bg-light">
     <div class="container">
-      <h2>About Me</h2>
-      <p>I am an AI Engineer and Data Scientist passionate about transforming research into deployable solutions. My focus areas include brain MRI segmentation, digital health platforms, financial forecasting, and energy analytics. I thrive on bridging advanced ML with real-world applications and productization.</p>
+      <h2 class="section-title">About</h2>
+      <p class="mt-3" style="max-width:860px;">I’m an <b>AI Engineer</b> and <b>Data Scientist</b> focused on building systems that are <b>accurate, robust, and shippable</b>. My recent work includes brain MRI segmentation pipelines (MONAI, SynthSeg), a modular cybersecurity platform with AI-driven detection, and data products for forecasting and optimization. I care about clean engineering, observability, and product impact.</p>
     </div>
   </section>
 
   <!-- SKILLS -->
   <section id="skills" class="py-5 bg-white">
     <div class="container">
-      <h2>Skills</h2>
-      <ul>
-        <li><b>ML/DL:</b> PyTorch, MONAI, scikit-learn, XGBoost</li>
-        <li><b>Medical Imaging:</b> 3D U-Net, DynUNet, SynthSeg, 3D Slicer</li>
-        <li><b>NLP/ASR:</b> Text classification, Speech recognition</li>
-        <li><b>Backend:</b> Python, SQL, Flask, Airflow</li>
-        <li><b>Deployment:</b> Gradio, Hugging Face, Docker</li>
-        <li><b>Other:</b> Unity, Blender, React (basic)</li>
-      </ul>
+      <h2 class="section-title">Skills</h2>
+      <div class="row mt-3 g-3">
+        <div class="col-md-6">
+          <div class="card h-100 p-3">
+            <h6 class="text-uppercase text-muted mb-2">ML & DL</h6>
+            <div>
+              <span class="skill-badge badge-soft me-1 mb-1">PyTorch</span>
+              <span class="skill-badge badge-soft me-1 mb-1">MONAI</span>
+              <span class="skill-badge badge-soft me-1 mb-1">scikit-learn</span>
+              <span class="skill-badge badge-soft me-1 mb-1">XGBoost</span>
+              <span class="skill-badge badge-soft me-1 mb-1">FastAI</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100 p-3">
+            <h6 class="text-uppercase text-muted mb-2">Medical Imaging</h6>
+            <div>
+              <span class="skill-badge badge-soft me-1 mb-1">3D U-Net</span>
+              <span class="skill-badge badge-soft me-1 mb-1">DynUNet</span>
+              <span class="skill-badge badge-soft me-1 mb-1">SynthSeg</span>
+              <span class="skill-badge badge-soft me-1 mb-1">3D Slicer</span>
+              <span class="skill-badge badge-soft me-1 mb-1">NIfTI/DICOM</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100 p-3">
+            <h6 class="text-uppercase text-muted mb-2">NLP & ASR</h6>
+            <div>
+              <span class="skill-badge badge-soft me-1 mb-1">Text Classification</span>
+              <span class="skill-badge badge-soft me-1 mb-1">Speech Recognition</span>
+              <span class="skill-badge badge-soft me-1 mb-1">Transformers</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100 p-3">
+            <h6 class="text-uppercase text-muted mb-2">Backend & Data</h6>
+            <div>
+              <span class="skill-badge badge-soft me-1 mb-1">Python</span>
+              <span class="skill-badge badge-soft me-1 mb-1">SQL</span>
+              <span class="skill-badge badge-soft me-1 mb-1">Flask</span>
+              <span class="skill-badge badge-soft me-1 mb-1">Airflow</span>
+              <span class="skill-badge badge-soft me-1 mb-1">Pandas</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100 p-3">
+            <h6 class="text-uppercase text-muted mb-2">Deployment</h6>
+            <div>
+              <span class="skill-badge badge-soft me-1 mb-1">Docker</span>
+              <span class="skill-badge badge-soft me-1 mb-1">Gradio</span>
+              <span class="skill-badge badge-soft me-1 mb-1">Hugging Face</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100 p-3">
+            <h6 class="text-uppercase text-muted mb-2">Other</h6>
+            <div>
+              <span class="skill-badge badge-soft me-1 mb-1">Unity</span>
+              <span class="skill-badge badge-soft me-1 mb-1">Blender</span>
+              <span class="skill-badge badge-soft me-1 mb-1">React (basic)</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- PROJECTS -->
   <section id="projects" class="py-5 bg-light">
     <div class="container">
-      <h2>Projects</h2>
+      <h2 class="section-title">Projects</h2>
       <div class="row g-4">
         <div class="col-md-6">
           <div class="card h-100">
             <div class="card-body">
               <h5 class="card-title">ShadowEye – Cybersecurity Platform</h5>
-              <p class="card-text">Next-gen modular cybersecurity platform integrating AI-powered threat detection, fraud message classification (ROC-AUC 92.7%), and OWASP-compliant vulnerability scanning.</p>
+              <p class="card-text">Modular cybersecurity platform integrating AI-powered threat detection, fraud message classification (ROC-AUC 92.7%), and OWASP-compliant vulnerability scanning.</p>
+              <div class="mt-2">
+                <span class="tag">Python</span>
+                <span class="tag">NLP</span>
+                <span class="tag">Security</span>
+              </div>
             </div>
           </div>
         </div>
@@ -82,7 +227,12 @@
           <div class="card h-100">
             <div class="card-body">
               <h5 class="card-title">Brain MRI Tumor Segmentation</h5>
-              <p class="card-text">3D U-Net & DynUNet with MONAI for BraTS 2021 dataset. Patch-based training, balanced loss functions, modality dropout and SynthSeg integration.</p>
+              <p class="card-text">3D U-Net & DynUNet with MONAI for BraTS. Patch-based training, balanced losses, modality dropout and SynthSeg integration.</p>
+              <div class="mt-2">
+                <span class="tag">PyTorch</span>
+                <span class="tag">MONAI</span>
+                <span class="tag">Medical Imaging</span>
+              </div>
             </div>
           </div>
         </div>
@@ -90,7 +240,12 @@
           <div class="card h-100">
             <div class="card-body">
               <h5 class="card-title">Neuridian – Digital Neuropsychology Platform</h5>
-              <p class="card-text">Tele-health platform with multilingual ASR+NLP scoring, VR avatar modules, and GDPR-compliant clinical data management.</p>
+              <p class="card-text">Tele-health platform with multilingual ASR + NLP scoring, VR modules, and GDPR-compliant clinical data management.</p>
+              <div class="mt-2">
+                <span class="tag">ASR</span>
+                <span class="tag">NLP</span>
+                <span class="tag">Healthcare</span>
+              </div>
             </div>
           </div>
         </div>
@@ -98,7 +253,12 @@
           <div class="card h-100">
             <div class="card-body">
               <h5 class="card-title">Fraud Detection Pipeline</h5>
-              <p class="card-text">Proxy data + ML for customer behavior modeling. TF-IDF + RandomForest with GridSearchCV, integrated into web applications.</p>
+              <p class="card-text">Proxy data + ML for customer behavior modeling. TF-IDF + RandomForest with GridSearchCV integrated into web apps.</p>
+              <div class="mt-2">
+                <span class="tag">sklearn</span>
+                <span class="tag">MLOps</span>
+                <span class="tag">Fintech</span>
+              </div>
             </div>
           </div>
         </div>
@@ -106,7 +266,11 @@
           <div class="card h-100">
             <div class="card-body">
               <h5 class="card-title">Parking Spot Detector</h5>
-              <p class="card-text">OpenCV-based real-time parking spot classification system using masks. Detailed steps published on Medium.</p>
+              <p class="card-text">OpenCV-based real-time parking spot classifier using masks. Steps published on Medium.</p>
+              <div class="mt-2">
+                <span class="tag">OpenCV</span>
+                <span class="tag">Computer Vision</span>
+              </div>
             </div>
           </div>
         </div>
@@ -114,7 +278,12 @@
           <div class="card h-100">
             <div class="card-body">
               <h5 class="card-title">Intel Image Classifier</h5>
-              <p class="card-text">FastAI + ResNet on Intel dataset with Gradio + HuggingFace deployment. Step-by-step blog available.</p>
+              <p class="card-text">FastAI + ResNet on Intel dataset with Gradio + HuggingFace deployment.</p>
+              <div class="mt-2">
+                <span class="tag">FastAI</span>
+                <span class="tag">ResNet</span>
+                <span class="tag">Deployment</span>
+              </div>
             </div>
           </div>
         </div>
@@ -125,24 +294,36 @@
   <!-- EXPERIENCE -->
   <section id="experience" class="py-5 bg-white">
     <div class="container">
-      <h2>Experience</h2>
-      <ul>
-        <li><b>IsıTech (2025–)</b> – AI Engineer: MRI segmentation, NLP for diagnosis codes, TUBITAK 1501 projects.</li>
-        <li><b>Mono Payments (2024)</b> – Data Scientist: Sales forecasting, proxy data modeling, web ML integration.</li>
-        <li><b>TAM Finans (2023)</b> – Data Analyst Intern: Real-time branch data analysis, financial impact reporting.</li>
-        <li><b>Research Project (2024–)</b> – Data-driven Energy Systems under Dr. Küfeoğlu (UK Gov).</li>
-      </ul>
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline mt-4">
+        <div class="timeline-item">
+          <h6 class="mb-1">AI Engineer – IsıTech <span class="text-muted">(2025–present)</span></h6>
+          <p class="mb-0 text-muted">MRI segmentation, NLP for diagnosis coding, TÜBİTAK 1501 projects.</p>
+        </div>
+        <div class="timeline-item">
+          <h6 class="mb-1">Data Scientist – Mono Payments <span class="text-muted">(2024)</span></h6>
+          <p class="mb-0 text-muted">Sales forecasting, proxy data modeling, ML integration into web apps.</p>
+        </div>
+        <div class="timeline-item">
+          <h6 class="mb-1">Data Analyst Intern – TAM Finans <span class="text-muted">(2023)</span></h6>
+          <p class="mb-0 text-muted">Real-time branch analytics and financial impact reporting.</p>
+        </div>
+        <div class="timeline-item">
+          <h6 class="mb-1">Research – Data-driven Energy Systems <span class="text-muted">(2024–)</span></h6>
+          <p class="mb-0 text-muted">Research with Dr. Küfeoğlu (UK Gov) on analytics for energy systems.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- WRITING -->
   <section id="writing" class="py-5 bg-light">
     <div class="container">
-      <h2>Writing</h2>
+      <h2 class="section-title">Writing</h2>
       <ul>
-        <li><a href="https://medium.com/@okanolgun980">Intel Image Classification – FastAI + Gradio</a></li>
-        <li><a href="https://medium.com/@okanolgun980">Parking Spot Detection – OpenCV</a></li>
-        <li><a href="https://medium.com/@okanolgun980">Speech Recognition Pipeline</a></li>
+        <li><a href="https://medium.com/@okanolgun980"><i class="bi bi-journal-text me-1"></i> Intel Image Classification – FastAI + Gradio</a></li>
+        <li><a href="https://medium.com/@okanolgun980"><i class="bi bi-journal-text me-1"></i> Parking Spot Detection – OpenCV</a></li>
+        <li><a href="https://medium.com/@okanolgun980"><i class="bi bi-journal-text me-1"></i> Speech Recognition Pipeline</a></li>
       </ul>
     </div>
   </section>
@@ -150,19 +331,65 @@
   <!-- CONTACT -->
   <section id="contact" class="py-5 bg-white">
     <div class="container">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:oknolgn28@gmail.com">oknolgn28@gmail.com</a></p>
-      <p>Location: Ankara, Turkey</p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/okanolgun06/">okanolgun06</a></p>
-      <p>GitHub: <a href="https://github.com/okanolgun">okanolgun</a></p>
-      <p>Medium: <a href="https://medium.com/@okanolgun980">@okanolgun980</a></p>
+      <h2 class="section-title">Contact</h2>
+      <p class="mt-2"><i class="bi bi-envelope me-2"></i><a href="mailto:oknolgn28@gmail.com">oknolgn28@gmail.com</a></p>
+      <p><i class="bi bi-geo-alt me-2"></i>Ankara, Turkey</p>
+      <p class="mb-0">
+        <a class="me-3" href="https://www.linkedin.com/in/okanolgun06/"><i class="bi bi-linkedin"></i> LinkedIn</a>
+        <a class="me-3" href="https://github.com/okanolgun"><i class="bi bi-github"></i> GitHub</a>
+        <a href="https://medium.com/@okanolgun980"><i class="bi bi-medium"></i> Medium</a>
+      </p>
     </div>
   </section>
 
-  <footer class="text-center py-3 bg-light">
-    <p class="mb-0">© 2025 Okan Olgun</p>
+  <footer class="text-center py-4 footer bg-light">
+    <p class="mb-0">© <span id="year"></span> Okan Olgun • Built with Bootstrap 5</p>
   </footer>
+  <button id="backToTop" class="btn btn-brand back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Theme persistence
+    const root = document.body;
+    const themeToggle = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    root.setAttribute('data-bs-theme', savedTheme);
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        const current = root.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-bs-theme', current);
+        localStorage.setItem('theme', current);
+        themeToggle.innerHTML = current === 'dark' ? '<i class="bi bi-sun"></i>' : '<i class="bi bi-moon-stars"></i>';
+      });
+      themeToggle.innerHTML = savedTheme === 'dark' ? '<i class="bi bi-sun"></i>' : '<i class="bi bi-moon-stars"></i>';
+    }
+
+    // Active link on scroll
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = Array.from(navLinks).map(l => document.querySelector(l.getAttribute('href'))).filter(Boolean);
+    const onScroll = () => {
+      const scrollPos = window.scrollY + 100;
+      for (const link of navLinks) link.classList.remove('active');
+      for (const sec of sections) {
+        if (sec.offsetTop <= scrollPos && sec.offsetTop + sec.offsetHeight > scrollPos) {
+          const active = document.querySelector(`.nav-link[href="#${sec.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      }
+    };
+    document.addEventListener('scroll', onScroll);
+    window.addEventListener('load', onScroll);
+
+    // Back to top
+    const backToTop = document.getElementById('backToTop');
+    const toggleBackToTop = () => {
+      if (window.scrollY > 300) backToTop.style.display = 'block'; else backToTop.style.display = 'none';
+    };
+    document.addEventListener('scroll', toggleBackToTop);
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
