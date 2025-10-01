@@ -71,6 +71,11 @@
     .timeline-item::before { content: ""; position: absolute; left: 3px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: var(--brand); box-shadow: 0 0 0 4px rgba(14,165,233,0.15); }
     .footer { border-top: 1px solid var(--border); }
     .back-to-top { position: fixed; right: 16px; bottom: 16px; z-index: 1030; display: none; }
+    /* Force section backgrounds in dark mode */
+    [data-bs-theme="dark"] .bg-light, [data-bs-theme="dark"] .bg-white { background-color: var(--bg) !important; }
+    [data-bs-theme="dark"] .text-dark { color: var(--text) !important; }
+    /* Hero image container helper */
+    .hero-img { max-width: 420px; width: 100%; height: auto; border-radius: 20px; box-shadow: var(--shadow); }
   </style>
 </head>
 <body data-bs-theme="light">
@@ -83,12 +88,18 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#writing">Writing</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a id="nav-about" class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a id="nav-skills" class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a id="nav-projects" class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a id="nav-experience" class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a id="nav-writing" class="nav-link" href="#writing">Writing</a></li>
+          <li class="nav-item"><a id="nav-contact" class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-2">
+            <div class="btn-group" role="group" aria-label="Language switcher">
+              <button id="langEN" class="btn btn-sm btn-ghost">EN</button>
+              <button id="langTR" class="btn btn-sm btn-ghost">TR</button>
+            </div>
+          </li>
           <li class="nav-item ms-2">
             <button id="themeToggle" class="btn btn-sm btn-ghost" aria-label="Toggle theme">
               <i class="bi bi-moon-stars"></i>
@@ -104,19 +115,19 @@
     <div class="container">
       <div class="row align-items-center gy-4">
         <div class="col-lg-6 text-center text-lg-start">
-          <span class="badge badge-soft mb-3">AI Engineer • Data Scientist</span>
-          <h1 class="fw-bold display-4" style="letter-spacing:-0.02em;">Building reliable AI for real-world impact.</h1>
-          <p class="lead mt-3" style="max-width:760px;">Production-grade machine learning across medical imaging, cybersecurity, fintech, and energy. From research to deployment with measurable outcomes.</p>
+          <span id="hero-badge" class="badge badge-soft mb-3">AI Engineer • Data Scientist</span>
+          <h1 id="hero-title" class="fw-bold display-4" style="letter-spacing:-0.02em;">Building reliable AI for real-world impact.</h1>
+          <p id="hero-sub" class="lead mt-3" style="max-width:760px;">Production-grade machine learning across medical imaging, cybersecurity, fintech, and energy. From research to deployment with measurable outcomes.</p>
           <div class="mt-4">
-            <a href="/Okan_Olgun_resume.pdf" target="_blank" class="btn btn-brand btn-lg me-2">Download CV (EN)</a>
-            <a href="/Okan_Olgun_ozgecmis.pdf" target="_blank" class="btn btn-ghost btn-lg me-2">Download CV (TR)</a>
+            <a id="btn-cv-en" href="/Okan_Olgun_resume.pdf" target="_blank" class="btn btn-brand btn-lg me-2">Download CV (EN)</a>
+            <a id="btn-cv-tr" href="/Okan_Olgun_ozgecmis.pdf" target="_blank" class="btn btn-ghost btn-lg me-2">Download CV (TR)</a>
             <a href="https://github.com/okanolgun" class="btn btn-ghost btn-lg me-2"><i class="bi bi-github me-1"></i> GitHub</a>
             <a href="https://www.linkedin.com/in/okanolgun06/" class="btn btn-ghost btn-lg me-2"><i class="bi bi-linkedin me-1"></i> LinkedIn</a>
             <a href="https://medium.com/@okanolgun980" class="btn btn-ghost btn-lg"><i class="bi bi-medium me-1"></i> Medium</a>
           </div>
         </div>
         <div class="col-lg-6 text-center">
-          <img src="/avatar.jpg" alt="Portrait of Okan Olgun" class="rounded-circle shadow" style="max-width: 320px; width: 80%; height: auto; object-fit: cover;" onerror="this.style.display='none'" />
+          <img src="/avatar.jpg" alt="Portrait of Okan Olgun" class="hero-img" style="object-fit: contain;" onerror="this.style.display='none'" />
         </div>
       </div>
     </div>
@@ -125,15 +136,15 @@
   <!-- ABOUT -->
   <section id="about" class="py-5 bg-light">
     <div class="container">
-      <h2 class="section-title">About</h2>
-      <p class="mt-3" style="max-width:860px;">I’m an <b>AI Engineer</b> and <b>Data Scientist</b> focused on building systems that are <b>accurate, robust, and shippable</b>. My recent work includes brain MRI segmentation pipelines (MONAI, SynthSeg), a modular cybersecurity platform with AI-driven detection, and data products for forecasting and optimization. I care about clean engineering, observability, and product impact.</p>
+      <h2 id="about-title" class="section-title">About</h2>
+      <p id="about-text" class="mt-3" style="max-width:860px;">I’m an <b>AI Engineer</b> and <b>Data Scientist</b> focused on building systems that are <b>accurate, robust, and shippable</b>. My recent work includes brain MRI segmentation pipelines (MONAI, SynthSeg), a modular cybersecurity platform with AI-driven detection, and data products for forecasting and optimization. I care about clean engineering, observability, and product impact.</p>
     </div>
   </section>
 
   <!-- SKILLS -->
   <section id="skills" class="py-5 bg-white">
     <div class="container">
-      <h2 class="section-title">Skills</h2>
+      <h2 id="skills-title" class="section-title">Skills</h2>
       <div class="row mt-3 g-3">
         <div class="col-md-6">
           <div class="card h-100 p-3">
@@ -208,7 +219,7 @@
   <!-- PROJECTS -->
   <section id="projects" class="py-5 bg-light">
     <div class="container">
-      <h2 class="section-title">Projects</h2>
+      <h2 id="projects-title" class="section-title">Projects</h2>
       <div class="row g-4">
         <div class="col-md-6">
           <div class="card h-100">
@@ -294,7 +305,7 @@
   <!-- EXPERIENCE -->
   <section id="experience" class="py-5 bg-white">
     <div class="container">
-      <h2 class="section-title">Experience</h2>
+      <h2 id="experience-title" class="section-title">Experience</h2>
       <div class="timeline mt-4">
         <div class="timeline-item">
           <h6 class="mb-1">AI Engineer – IsıTech <span class="text-muted">(2025–present)</span></h6>
@@ -319,7 +330,7 @@
   <!-- WRITING -->
   <section id="writing" class="py-5 bg-light">
     <div class="container">
-      <h2 class="section-title">Writing</h2>
+      <h2 id="writing-title" class="section-title">Writing</h2>
       <ul>
         <li><a href="https://medium.com/@okanolgun980"><i class="bi bi-journal-text me-1"></i> Intel Image Classification – FastAI + Gradio</a></li>
         <li><a href="https://medium.com/@okanolgun980"><i class="bi bi-journal-text me-1"></i> Parking Spot Detection – OpenCV</a></li>
@@ -331,7 +342,7 @@
   <!-- CONTACT -->
   <section id="contact" class="py-5 bg-white">
     <div class="container">
-      <h2 class="section-title">Contact</h2>
+      <h2 id="contact-title" class="section-title">Contact</h2>
       <p class="mt-2"><i class="bi bi-envelope me-2"></i><a href="mailto:oknolgn28@gmail.com">oknolgn28@gmail.com</a></p>
       <p><i class="bi bi-geo-alt me-2"></i>Ankara, Turkey</p>
       <p class="mb-0">
@@ -390,6 +401,50 @@
 
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // i18n minimal
+    const i18n = {
+      en: {
+        nav: { about: 'About', skills: 'Skills', projects: 'Projects', experience: 'Experience', writing: 'Writing', contact: 'Contact' },
+        hero: { badge: 'AI Engineer • Data Scientist', title: 'Building reliable AI for real-world impact.', sub: 'Production-grade machine learning across medical imaging, cybersecurity, fintech, and energy. From research to deployment with measurable outcomes.', btnEn: 'Download CV (EN)', btnTr: 'Download CV (TR)' },
+        sections: { about: 'About', skills: 'Skills', projects: 'Projects', experience: 'Experience', writing: 'Writing', contact: 'Contact' },
+        aboutText: "I’m an <b>AI Engineer</b> and <b>Data Scientist</b> focused on building systems that are <b>accurate, robust, and shippable</b>. My recent work includes brain MRI segmentation pipelines (MONAI, SynthSeg), a modular cybersecurity platform with AI-driven detection, and data products for forecasting and optimization. I care about clean engineering, observability, and product impact."
+      },
+      tr: {
+        nav: { about: 'Hakkımda', skills: 'Yetenekler', projects: 'Projeler', experience: 'Deneyim', writing: 'Yazılar', contact: 'İletişim' },
+        hero: { badge: 'Yapay Zekâ Mühendisi • Veri Bilimci', title: 'Gerçek dünyada etkisi olan güvenilir yapay zekâ.', sub: 'Medikal görüntüleme, siber güvenlik, finans ve enerjide üretim seviyesinde makine öğrenmesi. Araştırmadan canlı ortama, ölçülebilir sonuçlarla.', btnEn: 'CV İndir (EN)', btnTr: 'CV İndir (TR)' },
+        sections: { about: 'Hakkımda', skills: 'Yetenekler', projects: 'Projeler', experience: 'Deneyim', writing: 'Yazılar', contact: 'İletişim' },
+        aboutText: "<b>Yapay Zekâ Mühendisi</b> ve <b>Veri Bilimci</b> olarak <b>doğru, dayanıklı ve ürünleştirilebilir</b> sistemler geliştiriyorum. Son işlerimde beyin MRI segmentasyonu (MONAI, SynthSeg), yapay zekâ destekli modüler siber güvenlik platformu ve tahmin/optimizasyon odaklı veri ürünleri yer alıyor. Temiz mühendislik, gözlemlenebilirlik ve ürün etkisine önem veriyorum."
+      }
+    };
+    const setLang = (lang) => {
+      const dict = i18n[lang];
+      document.getElementById('nav-about').textContent = dict.nav.about;
+      document.getElementById('nav-skills').textContent = dict.nav.skills;
+      document.getElementById('nav-projects').textContent = dict.nav.projects;
+      document.getElementById('nav-experience').textContent = dict.nav.experience;
+      document.getElementById('nav-writing').textContent = dict.nav.writing;
+      document.getElementById('nav-contact').textContent = dict.nav.contact;
+      document.getElementById('hero-badge').textContent = dict.hero.badge;
+      document.getElementById('hero-title').textContent = dict.hero.title;
+      document.getElementById('hero-sub').textContent = dict.hero.sub;
+      document.getElementById('btn-cv-en').textContent = dict.hero.btnEn;
+      document.getElementById('btn-cv-tr').textContent = dict.hero.btnTr;
+      document.getElementById('about-title').textContent = dict.sections.about;
+      document.getElementById('skills-title').textContent = dict.sections.skills;
+      document.getElementById('projects-title').textContent = dict.sections.projects;
+      document.getElementById('experience-title').textContent = dict.sections.experience;
+      document.getElementById('writing-title').textContent = dict.sections.writing;
+      document.getElementById('contact-title').textContent = dict.sections.contact;
+      document.getElementById('about-text').innerHTML = dict.aboutText;
+      localStorage.setItem('lang', lang);
+      document.getElementById('langEN').classList.toggle('btn-brand', lang==='en');
+      document.getElementById('langTR').classList.toggle('btn-brand', lang==='tr');
+    };
+    const savedLang = localStorage.getItem('lang') || 'en';
+    setLang(savedLang);
+    document.getElementById('langEN').addEventListener('click', () => setLang('en'));
+    document.getElementById('langTR').addEventListener('click', () => setLang('tr'));
   </script>
 </body>
 </html>
