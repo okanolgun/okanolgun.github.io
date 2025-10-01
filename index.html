@@ -124,7 +124,7 @@
         </div>
         <div class="col-lg-6 text-center">
           <img src="/avatar.jpg" alt="Portrait of Okan Olgun" class="hero-img" style="object-fit: cover;" onerror="this.style.display='none'" />
-          <div id="hero-quote" class="hero-quote">“AI will be the next revolution; I am coding it.”</div>
+          <div id="hero-quote" class="hero-quote">“AI will be the next revolution; and I am coding it.”</div>
         </div>
       </div>
     </div>
@@ -247,13 +247,14 @@
         <div class="col-md-6">
           <div class="card h-100">
             <div class="card-body">
-              <h5 class="card-title">Neuridian – Digital Neuropsychology Platform</h5>
-              <p class="card-text">Tele-health platform with multilingual ASR + NLP scoring, VR modules, and GDPR-compliant clinical data management.</p>
+              <h5 class="card-title">AI Portfolio Projects</h5>
+              <p class="card-text">Collection of machine learning projects including computer vision, NLP, and data analysis implementations with full source code.</p>
               <div class="mt-2">
-                <span class="tag">ASR</span>
-                <span class="tag">NLP</span>
-                <span class="tag">Healthcare</span>
+                <span class="tag">Python</span>
+                <span class="tag">ML</span>
+                <span class="tag">Open Source</span>
               </div>
+              <a href="https://github.com/okanolgun" target="_blank" class="btn btn-ghost btn-sm mt-2"><i class="bi bi-github me-1"></i> View on GitHub</a>
             </div>
           </div>
         </div>
@@ -312,7 +313,7 @@
           </h2>
           <div id="exp2025" class="accordion-collapse collapse" aria-labelledby="exp2025h" data-bs-parent="#expAccordion">
             <div class="accordion-body">
-              <ul class="mb-0">
+              <ul id="exp2025-content" class="mb-0">
                 <li>Brain MRI segmentation using 3D U-Net and DynUNet architectures with MONAI framework</li>
                 <li>NLP models for automated diagnosis code classification and medical text processing</li>
                 <li>TÜBİTAK 1501 project development: AI-powered medical imaging solutions</li>
@@ -330,7 +331,7 @@
           </h2>
           <div id="expRes" class="accordion-collapse collapse" aria-labelledby="expResh" data-bs-parent="#expAccordion">
             <div class="accordion-body">
-              <ul class="mb-0">
+              <ul id="expRes-content" class="mb-0">
                 <li>Research collaboration with Dr. Küfeoğlu on energy system analytics (UK Government funded)</li>
                 <li>Data collection, cleaning, and preprocessing for energy consumption patterns</li>
                 <li>Statistical modeling and predictive analytics for energy optimization</li>
@@ -347,7 +348,7 @@
           </h2>
           <div id="exp2024" class="accordion-collapse collapse" aria-labelledby="exp2024h" data-bs-parent="#expAccordion">
             <div class="accordion-body">
-              <ul class="mb-0">
+              <ul id="exp2024-content" class="mb-0">
                 <li>Sales forecasting models using time series analysis and machine learning algorithms</li>
                 <li>Proxy data modeling for customer behavior prediction and fraud detection</li>
                 <li>TF-IDF + RandomForest implementation for text classification tasks</li>
@@ -365,7 +366,7 @@
           </h2>
           <div id="exp2023" class="accordion-collapse collapse" aria-labelledby="exp2023h" data-bs-parent="#expAccordion">
             <div class="accordion-body">
-              <ul class="mb-0">
+              <ul id="exp2023-content" class="mb-0">
                 <li>Real-time branch analytics and performance monitoring dashboards</li>
                 <li>Financial impact analysis and risk assessment reporting</li>
                 <li>Data pipeline automation and ETL process optimization</li>
@@ -524,13 +525,25 @@
         nav: { about: 'About', skills: 'Skills', projects: 'Projects', experience: 'Experience', writing: 'Writing', contact: 'Contact' },
         hero: { badge: 'AI Engineer • Data Scientist', title: 'Building reliable AI for real-world impact.', sub: 'Production-grade machine learning across medical imaging, cybersecurity, fintech, and energy. From research to deployment with measurable outcomes.', btnEn: 'Download CV (EN)', btnTr: 'Download CV (TR)', quote: '“AI will be the next revolution; I am coding it.”' },
         sections: { about: 'About', skills: 'Skills', projects: 'Projects', experience: 'Experience', writing: 'Writing', contact: 'Contact' },
-        aboutText: "I’m an <b>AI Engineer</b> and <b>Data Scientist</b> focused on building systems that are <b>accurate, robust, and shippable</b>. My recent work includes brain MRI segmentation pipelines (MONAI, SynthSeg), a modular cybersecurity platform with AI-driven detection, and data products for forecasting and optimization. I care about clean engineering, observability, and product impact."
+        aboutText: "I'm an <b>AI Engineer</b> and <b>Data Scientist</b> focused on building systems that are <b>accurate, robust, and shippable</b>. My recent work includes brain MRI segmentation pipelines (MONAI, SynthSeg), a modular cybersecurity platform with AI-driven detection, and data products for forecasting and optimization. I care about clean engineering, observability, and product impact.",
+        experience: {
+          exp2025: ['Developed brain MRI segmentation models using 3D U-Net and DynUNet architectures with MONAI framework for tumor detection and analysis', 'Implemented NLP models for automated diagnosis code classification and medical text processing to improve clinical workflow efficiency', 'Led TÜBİTAK 1501 project development focusing on AI-powered medical imaging solutions for healthcare applications', 'Optimized data pipelines and deployed machine learning models in production environments ensuring scalability and reliability', 'Collaborated with medical professionals for clinical validation, feedback integration, and continuous model improvement'],
+          expRes: ['Conducted research collaboration with Dr. Küfeoğlu on data-driven energy systems analytics funded by UK Government', 'Performed comprehensive data collection, cleaning, and preprocessing for energy consumption pattern analysis', 'Developed statistical models and predictive analytics for energy optimization and sustainable energy management', 'Prepared academic papers and conference presentations on energy analytics and data-driven decision making'],
+          exp2024: ['Built sales forecasting models using time series analysis and advanced machine learning algorithms to predict revenue trends', 'Developed proxy data modeling techniques for customer behavior prediction and fraud detection systems', 'Implemented TF-IDF + RandomForest algorithms for text classification tasks in financial applications', 'Integrated ML models into web applications and developed RESTful APIs for real-time predictions', 'Optimized model performance and implemented monitoring systems for production environment stability'],
+          exp2023: ['Created real-time branch analytics dashboards and performance monitoring systems for financial operations', 'Conducted financial impact analysis and risk assessment reporting for executive decision-making processes', 'Automated data pipeline processes and optimized ETL workflows for improved data processing efficiency', 'Managed SQL database operations and optimized query performance for large-scale financial data analysis', 'Prepared stakeholder reports and data visualizations to support strategic business decisions']
+        }
       },
       tr: {
         nav: { about: 'Hakkımda', skills: 'Yetenekler', projects: 'Projeler', experience: 'Deneyim', writing: 'Yazılar', contact: 'İletişim' },
         hero: { badge: 'Yapay Zekâ Mühendisi • Veri Bilimci', title: 'Gerçek dünyada etkisi olan güvenilir yapay zekâ.', sub: 'Medikal görüntüleme, siber güvenlik, finans ve enerjide üretim seviyesinde makine öğrenmesi. Araştırmadan canlı ortama, ölçülebilir sonuçlarla.', btnEn: 'CV İndir (EN)', btnTr: 'CV İndir (TR)', quote: '“Yapay zekâ yeni bir devrim olacak; ben onu kodluyorum.”' },
         sections: { about: 'Hakkımda', skills: 'Yetenekler', projects: 'Projeler', experience: 'Deneyim', writing: 'Yazılar', contact: 'İletişim' },
-        aboutText: "<b>Yapay Zekâ Mühendisi</b> ve <b>Veri Bilimci</b> olarak <b>doğru, dayanıklı ve ürünleştirilebilir</b> sistemler geliştiriyorum. Son işlerimde beyin MRI segmentasyonu (MONAI, SynthSeg), yapay zekâ destekli modüler siber güvenlik platformu ve tahmin/optimizasyon odaklı veri ürünleri yer alıyor. Temiz mühendislik, gözlemlenebilirlik ve ürün etkisine önem veriyorum."
+        aboutText: "<b>Yapay Zekâ Mühendisi</b> ve <b>Veri Bilimci</b> olarak <b>doğru, dayanıklı ve ürünleştirilebilir</b> sistemler geliştiriyorum. Son işlerimde beyin MRI segmentasyonu (MONAI, SynthSeg), yapay zekâ destekli modüler siber güvenlik platformu ve tahmin/optimizasyon odaklı veri ürünleri yer alıyor. Temiz mühendislik, gözlemlenebilirlik ve ürün etkisine önem veriyorum.",
+        experience: {
+          exp2025: ['MONAI framework ile 3D U-Net ve DynUNet mimarileri kullanarak tümör tespiti ve analizi için beyin MRI segmentasyon modelleri geliştirdim', 'Klinik iş akışı verimliliğini artırmak için otomatik tanı kodu sınıflandırması ve tıbbi metin işleme NLP modelleri uyguladım', 'Sağlık uygulamaları için yapay zeka destekli tıbbi görüntüleme çözümlerine odaklanan TÜBİTAK 1501 proje geliştirmesini yönettim', 'Ölçeklenebilirlik ve güvenilirlik sağlayarak üretim ortamlarında veri hatlarını optimize ettim ve makine öğrenmesi modellerini dağıttım', 'Klinik doğrulama, geri bildirim entegrasyonu ve sürekli model iyileştirme için tıp profesyonelleri ile işbirliği yaptım'],
+          expRes: ['İngiltere Hükümeti tarafından fonlanan Dr. Küfeoğlu ile veri odaklı enerji sistemleri analitiği araştırma işbirliği yürüttüm', 'Enerji tüketim kalıbı analizi için kapsamlı veri toplama, temizleme ve ön işleme gerçekleştirdim', 'Enerji optimizasyonu ve sürdürülebilir enerji yönetimi için istatistiksel modeller ve tahmin analitiği geliştirdim', 'Enerji analitiği ve veri odaklı karar verme konularında akademik makaleler ve konferans sunumları hazırladım'],
+          exp2024: ['Gelir trendlerini tahmin etmek için zaman serisi analizi ve gelişmiş makine öğrenmesi algoritmaları kullanarak satış tahminleme modelleri oluşturdum', 'Müşteri davranışı tahmini ve dolandırıcılık tespiti sistemleri için proxy veri modelleme teknikleri geliştirdim', 'Finansal uygulamalarda metin sınıflandırma görevleri için TF-IDF + RandomForest algoritmaları uyguladım', 'Web uygulamalarına ML modellerini entegre ettim ve gerçek zamanlı tahminler için RESTful APIler geliştirdim', 'Model performansını optimize ettim ve üretim ortamı kararlılığı için izleme sistemleri uyguladım'],
+          exp2023: ['Finansal operasyonlar için gerçek zamanlı şube analitiği dashboardları ve performans izleme sistemleri oluşturdum', 'Yönetici karar verme süreçleri için finansal etki analizi ve risk değerlendirme raporlama gerçekleştirdim', 'Gelişmiş veri işleme verimliliği için veri hattı süreçlerini otomatikleştirdim ve ETL iş akışlarını optimize ettim', 'Büyük ölçekli finansal veri analizi için SQL veritabanı operasyonlarını yönettim ve sorgu performansını optimize ettim', 'Stratejik iş kararlarını desteklemek için paydaş raporları ve veri görselleştirmeleri hazırladım']
+        }
       }
     };
     const setLang = (lang) => {
@@ -554,6 +567,14 @@
       document.getElementById('contact-title').textContent = dict.sections.contact;
       document.getElementById('about-text').innerHTML = dict.aboutText;
       document.getElementById('hero-quote').textContent = dict.hero.quote;
+      // Update experience details
+      const expIds = ['exp2025', 'expRes', 'exp2024', 'exp2023'];
+      expIds.forEach(id => {
+        const ul = document.getElementById(id + '-content');
+        if (ul && dict.experience[id]) {
+          ul.innerHTML = dict.experience[id].map(item => `<li>${item}</li>`).join('');
+        }
+      });
       localStorage.setItem('lang', lang);
       document.getElementById('langEN').classList.toggle('btn-brand', lang==='en');
       document.getElementById('langTR').classList.toggle('btn-brand', lang==='tr');
