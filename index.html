@@ -1,212 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Okan Olgun – Applied AI Engineer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Applied AI Engineer with experience in 3D computer vision, real-time AI systems, and production-grade machine learning."/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Okan Olgun – AI Engineer & Data Scientist</title>
 
-  <link rel="icon" href="/favicon.ico" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <meta name="description" content="AI Engineer & Data Scientist building production-grade AI systems.">
+  <meta name="theme-color" content="#0ea5e9">
+
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
+      --brand:#0ea5e9;
+      --brand-2:#8b5cf6;
+      --text:#0f172a;
+      --muted:#64748b;
+      --bg:#f8fafc;
+      --card:#ffffff;
+      --border:#e2e8f0;
+      --shadow:0 10px 30px rgba(2,6,23,.06);
+    }
+    [data-bs-theme="dark"] {
+      --text:#e2e8f0;
+      --muted:#94a3b8;
       --bg:#0b1220;
       --card:#0f172a;
       --border:#1e293b;
-      --text:#e2e8f0;
-      --muted:#94a3b8;
-      --brand:#38bdf8;
+      --shadow:0 10px 30px rgba(0,0,0,.45);
     }
+
     body {
-      font-family: Inter, system-ui;
-      background: var(--bg);
-      color: var(--text);
-      scroll-behavior: smooth;
+      font-family:Inter,system-ui;
+      background:var(--bg);
+      color:var(--text);
+      scroll-behavior:smooth;
     }
-    section { scroll-margin-top: 90px; }
+
+    .navbar {
+      backdrop-filter:saturate(180%) blur(8px);
+      background:rgba(15,23,42,.7)!important;
+      border-bottom:1px solid var(--border);
+    }
+
+    .nav-link {
+      color:var(--muted)!important;
+    }
+    .nav-link:hover,.nav-link.active {
+      color:var(--text)!important;
+    }
+
+    .gradient-hero {
+      background:
+        radial-gradient(1200px 600px at 50% -10%,
+        rgba(14,165,233,.18),
+        rgba(139,92,246,.12) 40%,
+        rgba(14,165,233,0) 70%),
+        linear-gradient(180deg,
+        rgba(15,23,42,.6),
+        rgba(15,23,42,0));
+    }
+
+    .section-title {
+      font-weight:800;
+      letter-spacing:-.02em;
+    }
+
     .card {
-      background: var(--card);
-      border: 1px solid var(--border);
+      background:var(--card);
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
     }
+
     .tag {
       display:inline-block;
-      padding:.4rem .7rem;
-      margin:.2rem;
+      padding:.35rem .6rem;
       border-radius:999px;
+      background:rgba(14,165,233,.12);
+      color:var(--text);
       border:1px solid var(--border);
-      background:rgba(56,189,248,.08);
-      font-size:.85rem;
+      font-size:.8rem;
+      margin:.2rem;
     }
-    a { color: var(--brand); text-decoration:none; }
-    a:hover { text-decoration:underline; }
-    .avatar {
-      width:180px;
-      height:180px;
+
+    .hero-img {
+      max-width:380px;
+      width:100%;
       border-radius:50%;
-      object-fit:cover;
-      border:2px solid var(--border);
+      box-shadow:var(--shadow);
+    }
+
+    .btn-ghost {
+      border:1px solid var(--border);
+      color:var(--text);
+      background:transparent;
+    }
+    .btn-ghost:hover {
+      background:var(--card);
+    }
+
+    /* HARD FIX: text contrast */
+    [data-bs-theme="dark"] .card,
+    [data-bs-theme="dark"] .card * {
+      color:var(--text)!important;
+      opacity:1!important;
     }
   </style>
 </head>
 
-<body>
+<body data-bs-theme="dark">
 
 <!-- NAV -->
-<nav class="navbar navbar-expand-lg fixed-top bg-dark border-bottom">
+<nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
     <a class="navbar-brand fw-bold" href="#hero">Okan Olgun</a>
     <ul class="navbar-nav ms-auto">
-      <li class="nav-item"><a class="nav-link" href="#summary">Summary</a></li>
-      <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+      <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="#focus">Focus</a></li>
       <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
       <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-      <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-      <li class="nav-item ms-3">
-        <button id="langEN" class="btn btn-sm btn-outline-light">EN</button>
-        <button id="langTR" class="btn btn-sm btn-outline-light">TR</button>
+      <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      <li class="nav-item ms-2">
+        <button id="langEN" class="btn btn-sm btn-ghost">EN</button>
+        <button id="langTR" class="btn btn-sm btn-ghost">TR</button>
       </li>
     </ul>
   </div>
 </nav>
 
 <!-- HERO -->
-<section id="hero" class="min-vh-100 d-flex align-items-center">
-  <div class="container text-center">
-    <img src="/avatar.jpg" class="avatar mb-3" alt="Okan Olgun"/>
-    <h1 class="fw-bold">Okan Olgun</h1>
-    <p id="hero-title" class="lead">Applied AI Engineer</p>
-
-    <p class="text-muted">
-      Ankara, Turkey ·
-      <a href="mailto:oknolgn28@gmail.com">oknolgn28@gmail.com</a>
-    </p>
-
-    <div class="mt-3">
-      <a href="/Okan_Olgun_resume.pdf" class="me-3">Download CV (EN)</a>
-      <a href="/Okan_Olgun_ozgecmis.pdf" class="me-3">CV İndir (TR)</a>
-      <a href="https://github.com/okanolgun" class="me-3">GitHub</a>
-      <a href="https://www.linkedin.com/in/okanolgun06/">LinkedIn</a>
+<section id="hero" class="gradient-hero d-flex align-items-center" style="min-height:100vh;">
+  <div class="container">
+    <div class="row align-items-center gy-4">
+      <div class="col-lg-6">
+        <span id="hero-badge" class="tag mb-3">AI Engineer • Data Scientist</span>
+        <h1 id="hero-title" class="display-4 fw-bold">
+          Building reliable AI for real-world impact.
+        </h1>
+        <p id="hero-sub" class="lead mt-3">
+          Production-grade machine learning across medical imaging,
+          cybersecurity, fintech, and energy.
+        </p>
+        <div class="mt-4">
+          <a id="cv-en" href="/Okan_Olgun_resume.pdf" class="btn btn-ghost btn-lg me-2">Download CV (EN)</a>
+          <a id="cv-tr" href="/Okan_Olgun_ozgecmis.pdf" class="btn btn-ghost btn-lg me-2">Download CV (TR)</a>
+          <a href="https://github.com/okanolgun" class="btn btn-ghost btn-lg me-2">GitHub</a>
+          <a href="https://www.linkedin.com/in/okanolgun06/" class="btn btn-ghost btn-lg">LinkedIn</a>
+        </div>
+      </div>
+      <div class="col-lg-6 text-center">
+        <img src="/avatar.jpg" class="hero-img" alt="Okan Olgun">
+      </div>
     </div>
   </div>
 </section>
 
-<!-- SUMMARY -->
-<section id="summary" class="py-5">
+<!-- ABOUT -->
+<section id="about" class="py-5">
   <div class="container">
-    <h2 class="fw-bold mb-3">Summary</h2>
-    <p id="summary-text"></p>
+    <h2 class="section-title">About</h2>
+    <p id="about-text" class="mt-3" style="max-width:860px;"></p>
   </div>
 </section>
 
-<!-- SKILLS -->
-<section id="skills" class="py-5">
+<!-- FOCUS -->
+<section id="focus" class="py-5">
   <div class="container">
-    <h2 class="fw-bold mb-3">Core Skills</h2>
-    <div id="skills-content"></div>
+    <h2 class="section-title">Current Focus</h2>
+
+    <div class="card p-3 mt-3">
+      <b>3D Computer Vision & Medical Imaging</b>
+      <p class="mt-1">3D segmentation, volumetric data, clinical imaging pipelines</p>
+      <span class="tag">3D U-Net</span>
+      <span class="tag">MONAI</span>
+      <span class="tag">NIfTI / DICOM</span>
+    </div>
+
+    <div class="card p-3 mt-3">
+      <b>Real-Time & Systems-Oriented AI</b>
+      <p class="mt-1">Low-latency inference, optimization, system-level design</p>
+      <span class="tag">C++</span>
+      <span class="tag">CUDA</span>
+      <span class="tag">TensorRT</span>
+    </div>
+
+    <div class="card p-3 mt-3">
+      <b>End-to-End Machine Learning</b>
+      <p class="mt-1">From data pipelines to deployment</p>
+      <span class="tag">Python</span>
+      <span class="tag">PyTorch</span>
+      <span class="tag">SQL</span>
+    </div>
   </div>
 </section>
 
 <!-- EXPERIENCE -->
 <section id="experience" class="py-5">
   <div class="container">
-    <h2 class="fw-bold mb-3">Experience</h2>
-    <div id="experience-content"></div>
+    <h2 class="section-title">Experience</h2>
+
+    <div class="card p-3 mt-3">
+      <b>AI Engineer – IsıTech (2025–Present)</b>
+      <ul class="mt-2">
+        <li>3D brain MRI segmentation (MONAI, DynUNet)</li>
+        <li>NLP-based medical text classification</li>
+        <li>TÜBİTAK 1501 AI projects</li>
+      </ul>
+    </div>
+
+    <div class="card p-3 mt-3">
+      <b>Data Scientist – Mono Payments (2024)</b>
+      <ul class="mt-2">
+        <li>Sales forecasting and customer behavior modeling</li>
+      </ul>
+    </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects" class="py-5">
   <div class="container">
-    <h2 class="fw-bold mb-3">Selected Projects</h2>
-    <div id="projects-content"></div>
+    <h2 class="section-title">Projects</h2>
+
+    <div class="card p-3 mt-3">
+      <b>ShadowEye – Cybersecurity Platform</b>
+      <p class="mt-1">AI-based threat detection and message classification</p>
+    </div>
+
+    <div class="card p-3 mt-3">
+      <b>PERSANAVI – Medical 3D Anatomy Viewer</b>
+      <p class="mt-1">Personalized surgical visualization using AI segmentation</p>
+    </div>
   </div>
 </section>
 
-<!-- EDUCATION -->
-<section id="education" class="py-5">
+<!-- CONTACT -->
+<section id="contact" class="py-5">
   <div class="container">
-    <h2 class="fw-bold mb-3">Education</h2>
-    <div id="education-content"></div>
+    <h2 class="section-title">Contact</h2>
+    <p><i class="bi bi-envelope me-2"></i>oknolgn28@gmail.com</p>
+    <p><i class="bi bi-geo-alt me-2"></i>Ankara, Turkey</p>
   </div>
 </section>
 
 <script>
-const content = {
-  en: {
-    summary: `Applied AI Engineer with hands-on experience in 3D computer vision, NLP, and end-to-end machine learning systems. Specialized in 3D segmentation and advanced computer vision architectures, including defense-sector and medical imaging use cases. Proven track record in building production-ready ML pipelines from data preparation to deployment. Experience in bridging academic research with real-world production constraints and leading small research teams.`,
-    skills: `
-      <div class="card p-3 mb-3"><b>AI & ML</b><div class="tag">Deep Learning</div><div class="tag">End-to-End ML Systems</div></div>
-      <div class="card p-3 mb-3"><b>Computer Vision</b><div class="tag">2D/3D CV</div><div class="tag">3D Segmentation</div><div class="tag">Medical Imaging</div></div>
-      <div class="card p-3 mb-3"><b>Systems & Deployment</b><div class="tag">Embedded AI</div><div class="tag">Low-Latency Inference</div><div class="tag">FP16 / INT8</div></div>
-      <div class="card p-3"><b>Programming</b><div class="tag">Python</div><div class="tag">C++</div><div class="tag">CUDA</div><div class="tag">TensorRT</div></div>
-    `,
-    experience: `
-      <div class="card p-3 mb-3"><b>AI Engineer – IsıTech (2025–Present)</b>
-        <ul>
-          <li>Reduced manual 3D medical image segmentation time from 3–4 hours to 1–2 minutes.</li>
-          <li>Built domestic 3D segmentation systems achieving Dice scores up to 0.77.</li>
-          <li>Developed end-to-end AI pipelines and microservices deployments.</li>
-        </ul>
-      </div>
-      <div class="card p-3 mb-3"><b>Data Scientist – Mono Payments (2024)</b>
-        <ul>
-          <li>Built ML models for customer behavior and sales forecasting.</li>
-        </ul>
-      </div>
-    `,
-    projects: `
-      <div class="card p-3 mb-3"><b>High-Performance Aerial Threat Detection</b>
-        <p>Real-time UAV/SUAV detection system optimized for embedded environments.</p>
-      </div>
-      <div class="card p-3 mb-3"><b>PERSANAVI – Personalized Surgical Anatomy Viewer</b>
-        <p>AI-based 3D segmentation for medical visualization.</p>
-      </div>
-      <div class="card p-3"><b>ShadowEye – AI-Driven Cybersecurity Platform</b>
-        <p>Near real-time breach detection using NLP-based ML models.</p>
-      </div>
-    `,
-    education: `
-      <div class="card p-3 mb-3"><b>TED University</b> – B.S.E. Computer Engineering (English)<br/>Minor: Applied Data Analytics</div>
-      <div class="card p-3"><b>Ankara Atatürk High School</b> – English & German Preparatory Program</div>
-    `
-  },
-  tr: {
-    summary: `3B bilgisayarlı görü, NLP ve uçtan uca makine öğrenmesi sistemlerinde deneyime sahip Yapay Zekâ Mühendisi. Savunma ve medikal görüntüleme kullanım alanlarını kapsayan 3B segmentasyon ve ileri seviye bilgisayarlı görü mimarilerinde uzmanlaşmıştır. Veri hazırlamadan canlı ortama almaya kadar üretim seviyesinde ML sistemleri geliştirme tecrübesine sahiptir.`,
-    skills: `
-      <div class="card p-3 mb-3"><b>Yapay Zekâ & ML</b><div class="tag">Derin Öğrenme</div><div class="tag">Uçtan Uca ML</div></div>
-      <div class="card p-3 mb-3"><b>Bilgisayarlı Görü</b><div class="tag">2B/3B CV</div><div class="tag">Medikal Görüntüleme</div></div>
-      <div class="card p-3"><b>Sistemler</b><div class="tag">Gömülü AI</div><div class="tag">Düşük Gecikme</div></div>
-    `,
-    experience: `
-      <div class="card p-3 mb-3"><b>Yapay Zekâ Mühendisi – IsıTech</b>
-        <ul>
-          <li>Manuel 3B segmentasyon süresi saatlerden dakikalara düşürüldü.</li>
-          <li>Yerli 3B segmentasyon sistemleri geliştirildi.</li>
-        </ul>
-      </div>
-    `,
-    projects: `
-      <div class="card p-3 mb-3"><b>Hava Tehdit Tespit Sistemi</b>
-        <p>Gerçek zamanlı gömülü bilgisayarlı görü sistemi.</p>
-      </div>
-    `,
-    education: `
-      <div class="card p-3 mb-3"><b>TED Üniversitesi</b> – Bilgisayar Mühendisliği</div>
-    `
-  }
+const about = {
+  en: "I’m an AI Engineer and Data Scientist focused on building accurate, robust, and production-ready AI systems.",
+  tr: "Doğru, dayanıklı ve üretim seviyesinde yapay zekâ sistemleri geliştiren bir Yapay Zekâ Mühendisiyim."
 };
 
 function setLang(lang){
-  document.getElementById("summary-text").innerHTML = content[lang].summary;
-  document.getElementById("skills-content").innerHTML = content[lang].skills;
-  document.getElementById("experience-content").innerHTML = content[lang].experience;
-  document.getElementById("projects-content").innerHTML = content[lang].projects;
-  document.getElementById("education-content").innerHTML = content[lang].education;
+  document.getElementById("about-text").innerHTML = about[lang];
 }
-
 setLang("en");
+
 document.getElementById("langEN").onclick = () => setLang("en");
 document.getElementById("langTR").onclick = () => setLang("tr");
 </script>
