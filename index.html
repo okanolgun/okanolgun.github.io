@@ -158,11 +158,12 @@
   <div class="container">
     <a class="navbar-brand fw-bold" href="#hero">Okan Olgun</a>
     <ul class="navbar-nav ms-auto">
-      <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-      <li class="nav-item"><a class="nav-link" href="#focus">Focus</a></li>
-      <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-      <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-      <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      <li class="nav-item"><a id="nav-about" class="nav-link" href="#about">About</a></li>
+      <li class="nav-item"><a id="nav-focus" class="nav-link" href="#focus">Focus</a></li>
+      <li class="nav-item"><a id="nav-experience" class="nav-link" href="#experience">Experience</a></li>
+      <li class="nav-item"><a id="nav-projects" class="nav-link" href="#projects">Projects</a></li>
+      <li class="nav-item"><a id="nav-education" class="nav-link" href="#education">Education</a></li>
+      <li class="nav-item"><a id="nav-contact" class="nav-link" href="#contact">Contact</a></li>
       <li class="nav-item ms-2">
         <button id="themeToggle" class="btn btn-sm btn-ghost" type="button" aria-label="Toggle theme">
           <span id="themeIcon" class="bi bi-moon-stars"></span>
@@ -206,7 +207,7 @@
 <!-- ABOUT -->
 <section id="about" class="py-5">
   <div class="container">
-    <h2 class="section-title">About</h2>
+    <h2 id="about-title" class="section-title">About</h2>
     <p id="about-text" class="mt-3" style="max-width:860px;"></p>
   </div>
 </section>
@@ -214,70 +215,45 @@
 <!-- FOCUS -->
 <section id="focus" class="py-5">
   <div class="container">
-    <h2 class="section-title">Current Focus</h2>
-
-    <div class="card p-3 mt-3">
-      <b>3D Computer Vision & Medical Imaging</b>
-      <p class="mt-1">3D segmentation, volumetric data, clinical imaging pipelines</p>
-      <span class="tag">3D U-Net</span>
-      <span class="tag">MONAI</span>
-      <span class="tag">NIfTI / DICOM</span>
-    </div>
-
-    <div class="card p-3 mt-3">
-      <b>Real-Time & Systems-Oriented AI</b>
-      <p class="mt-1">Low-latency inference, optimization, system-level design</p>
-      <span class="tag">C++</span>
-      <span class="tag">CUDA</span>
-      <span class="tag">TensorRT</span>
-    </div>
-
-    <div class="card p-3 mt-3">
-      <b>End-to-End Machine Learning</b>
-      <p class="mt-1">From data pipelines to deployment</p>
-      <span class="tag">Python</span>
-      <span class="tag">PyTorch</span>
-      <span class="tag">SQL</span>
-    </div>
+    <h2 id="focus-title" class="section-title">Current Focus</h2>
+    <div id="focus-cards"></div>
   </div>
 </section>
 
 <!-- EXPERIENCE -->
 <section id="experience" class="py-5">
   <div class="container">
-    <h2 class="section-title">Experience</h2>
-
-    <div class="card p-3 mt-3">
-      <b>AI Engineer – IsıTech (2025–Present)</b>
-      <ul class="mt-2">
-        <li>3D brain MRI segmentation (MONAI, DynUNet)</li>
-        <li>NLP-based medical text classification</li>
-        <li>TÜBİTAK 1501 AI projects</li>
-      </ul>
-    </div>
-
-    <div class="card p-3 mt-3">
-      <b>Data Scientist – Mono Payments (2024)</b>
-      <ul class="mt-2">
-        <li>Sales forecasting and customer behavior modeling</li>
-      </ul>
-    </div>
+    <h2 id="experience-title" class="section-title">Experience</h2>
+    <div id="experience-cards"></div>
   </div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects" class="py-5">
   <div class="container">
-    <h2 class="section-title">Projects</h2>
+    <h2 id="projects-title" class="section-title">Projects</h2>
+    <div id="project-cards"></div>
+  </div>
+</section>
 
-    <div class="card p-3 mt-3">
-      <b>ShadowEye – Cybersecurity Platform</b>
-      <p class="mt-1">AI-based threat detection and message classification</p>
+<!-- EDUCATION & EXTRAS -->
+<section id="education" class="py-5">
+  <div class="container">
+    <h2 id="education-title" class="section-title">Education</h2>
+    <div id="education-cards"></div>
+    <div class="row mt-3 g-3">
+      <div class="col-lg-6">
+        <div class="card p-3 h-100">
+          <b id="additional-title">Additional Experience</b>
+          <div id="additional-body" class="mt-2"></div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card p-3 h-100">
+          <b id="volunteering-title">Social Responsibility</b>
+          <div id="volunteering-body" class="mt-2"></div>
+        </div>
     </div>
-
-    <div class="card p-3 mt-3">
-      <b>PERSANAVI – Medical 3D Anatomy Viewer</b>
-      <p class="mt-1">Personalized surgical visualization using AI segmentation</p>
     </div>
   </div>
 </section>
@@ -285,9 +261,17 @@
 <!-- CONTACT -->
 <section id="contact" class="py-5">
   <div class="container">
-    <h2 class="section-title">Contact</h2>
+    <h2 id="contact-title" class="section-title">Contact</h2>
     <p><i class="bi bi-envelope me-2"></i>oknolgn28@gmail.com</p>
-    <p><i class="bi bi-geo-alt me-2"></i>Ankara, Turkey</p>
+    <p><i class="bi bi-telephone me-2"></i>+90 543 933 3676</p>
+    <p><i class="bi bi-geo-alt me-2"></i><span id="contact-location">Ankara, Turkey</span></p>
+    <p class="mt-3">
+      <a class="me-3" href="https://www.linkedin.com/in/okanolgun06/" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a class="me-3" href="https://github.com/okanolgun" target="_blank" rel="noreferrer">GitHub</a>
+      <a class="me-3" href="https://scholar.google.com/" target="_blank" rel="noreferrer">Google Scholar</a>
+      <a class="me-3" href="https://www.researchgate.net/" target="_blank" rel="noreferrer">ResearchGate</a>
+      <a class="me-3" href="https://medium.com/" target="_blank" rel="noreferrer">Medium</a>
+    </p>
   </div>
 </section>
 
@@ -311,13 +295,266 @@ function initTheme(){
   applyTheme(prefersDark ? "dark" : "light");
 }
 
-const about = {
-  en: "I’m an AI Engineer and Data Scientist focused on building accurate, robust, and production-ready AI systems.",
-  tr: "Doğru, dayanıklı ve üretim seviyesinde yapay zekâ sistemleri geliştiren bir Yapay Zekâ Mühendisiyim."
+const content = {
+  tr: {
+    nav: { about:"Hakkımda", focus:"Odak", experience:"Deneyim", projects:"Projeler", education:"Eğitim", contact:"İletişim" },
+    hero: {
+      badge: "Yapay Zekâ Mühendisi • Veri Bilimci",
+      title: "Gerçek dünyada etki üreten güvenilir yapay zekâ.",
+      sub: "Tıbbi görüntüleme, siber güvenlik, fintech ve enerji alanlarında üretim seviyesinde makine öğrenmesi."
+    },
+    sections: { about:"Özet", focus:"Temel Yetkinlikler", experience:"İş Deneyimi", projects:"Seçili Projeler", education:"Eğitim", additional:"Ek Deneyimler", volunteering:"Sosyal Sorumluluk", contact:"İletişim" },
+    about:
+      "3B bilgisayarlı görü, doğal dil işleme (NLP) ve uçtan uca makine öğrenmesi sistemleri alanlarında uygulamalı deneyime sahip bir Yapay Zekâ Mühendisiyim. Savunma sanayii ve tıbbi görüntüleme başta olmak üzere 3B segmentasyon ve ileri seviye bilgisayarlı görü mimarileri üzerine çalışıyorum. Veri hazırlamadan model geliştirme, doğrulama ve üretim ortamına alma süreçlerini kapsayan ML sistemleri geliştirdim. Akademik çalışmalar ile üretim kısıtlarını bir araya getiren projelerde görev aldım ve küçük araştırma ekiplerinin teknik süreçlerini yönettim. Gerçek dünyada ölçülebilir etki üreten uygulamalı yapay zekâ sistemlerine odaklanıyorum.",
+    focusCards: [
+      { title:"Yapay Zekâ & Makine Öğrenmesi", body:"Derin öğrenme, makine öğrenmesi, uçtan uca ML sistemleri, model geliştirme ve değerlendirme", tags:["Deep Learning","End-to-End ML","Evaluation"] },
+      { title:"Bilgisayarlı Görü", body:"2B/3B bilgisayarlı görü, 3B segmentasyon, nesne tespiti, tıbbi görüntüleme", tags:["3D Segmentation","Object Detection","Medical Imaging"] },
+      { title:"Sistemler & Dağıtım", body:"Gömülü AI, mikroservis mimarileri, GPU hızlandırma, düşük gecikmeli çıkarım, FP16/INT8 optimizasyon", tags:["Microservices","CUDA","TensorRT","FP16/INT8"] },
+      { title:"Programlama & Kütüphaneler", body:"Python, C++ (C++14/17), SQL; PyTorch, MONAI, OpenCV, scikit-learn", tags:["Python","C++","PyTorch","MONAI","SQL"] }
+    ],
+    experienceCards: [
+      {
+        title: "Yapay Zekâ Mühendisi — IsıTech (Mart 2025 – Günümüz) • Ankara, Türkiye",
+        bullets: [
+          "Klinik kullanım senaryoları için geliştirilen uçtan uca 3B segmentasyon modelleri ile manuel segmentasyon süresi 3–4 saatten ~1–2 dakikaya düşürüldü.",
+          "Sınırlı veri seti (~70 hasta) üzerinde 0.77 (tümör) ve 0.70 (damarsal yapılar) Dice skorlarına ulaşan yerli 3B segmentasyon sistemi geliştirildi.",
+          "Gerçek MRI verilerindeki varyasyonları dikkate alan göreve özel 3B derin öğrenme mimarileri tasarlanıp eğitildi.",
+          "Veri standardizasyonu, ön işleme, eğitim, doğrulama, dağıtım ve raporlamayı kapsayan uçtan uca boru hatları kuruldu.",
+          "Bulut altyapısında mikroservis tabanlı yapay zekâ servisleri mimarisi oluşturuldu.",
+          "TÜBİTAK destekli Ar-Ge projelerinde sistem tasarımı, analiz, görselleştirme ve yayın hazırlıklarına katkı sağlandı."
+        ]
+      },
+      {
+        title: "Veri Bilimcisi — Mono Payments (Haz 2024 – Ara 2024) • Uzaktan, Londra (BK)",
+        bullets: [
+          "Unipubs platformunun veri, ML ve veritabanı süreçleri uçtan uca yönetildi.",
+          "Kullanıcı logları, işlem kayıtları ve görsel ürün verileri dahil heterojen veri kaynakları temizlenip analiz edildi.",
+          "Müşteri davranışları, harcama alışkanlıkları ve zamansal satın alma eğilimlerini inceleyen ML modelleri geliştirildi.",
+          "Reklam zamanlaması, ürün öne çıkarımı ve indirim stratejilerine yön veren öngörüler sunuldu.",
+          "Tıklanma, oturum süresi, sepete ekleme ve satış metriklerinde iyileşmelere katkı sağlandı."
+        ]
+      },
+      {
+        title: "Veri Analisti Stajyeri — TAM Finans Faktoring (Yaz 2023) • İstanbul, Türkiye",
+        bullets: [
+          "40 şubeden gelen gerçek zamanlı veri akışları analiz edilerek satış ve operasyonel süreçlere destek sağlandı.",
+          "Faiz oranları, vade süreleri ve kampanya stratejilerinin satışlara etkisi değerlendirildi."
+        ]
+      }
+    ],
+    projectCards: [
+      {
+        title:"Yüksek Performanslı Hava Tehdit Algılama & Telemetri Analiz Sistemi",
+        body:"Gömülü savunma sistemleri için düşük gecikme ve bellek kısıtları altında çalışan gerçek zamanlı sistem.",
+        bullets:[
+          "Standart dışı ikili uçuş verileri için özel telemetri çözücüsü ve 3B hareket modelleme altyapısı.",
+          "Nesne tespiti + Kalman filtre tabanlı takip içeren yüksek performanslı C++ CV boru hattı.",
+          "TensorRT/CUDA ile YOLO optimizasyonu (FP16/INT8), 3–4× hızlanma ve milisaniye altı gecikme hedefi."
+        ]
+      },
+      {
+        title:"PERSANAVI — Kişiselleştirilmiş Cerrahi Anatomi Görüntüleyici (TÜBİTAK)",
+        body:"Kişiye özel cerrahi planlama için 3B segmentasyon ve görselleştirme.",
+        bullets:[
+          "Manuel segmentasyon 3–4 saatten ~2 dakikaya indirildi.",
+          "Dice: 0.77 (tümör), 0.70 (damarsal yapılar).",
+          "MRI sekansına dayalı yeni tümör–damar segmentasyon yaklaşımı uygulandı."
+        ]
+      },
+      {
+        title:"ShadowEye — Yapay Zekâ Tabanlı Siber Güvenlik Platformu",
+        body:"Dark web kaynaklarından sızan verilerin tespiti ve sınıflandırılması.",
+        bullets:[
+          "Veri kazıma + manuel etiketleme ile özel veri setleri oluşturuldu.",
+          "360 model eğitimi; %86 doğruluk ve %92.7 ROC-AUC.",
+          "Tespit süresi ~5 dakikaya indirildi."
+        ]
+      },
+      {
+        title:"Veriye Dayalı Enerji — Dayanıklı & Sürdürülebilir Güç Sistemleri",
+        body:"Enerji sistemlerinde dijital teknolojilerin ticarileştirilmesine odaklanan araştırma çalışması.",
+        bullets:[
+          "Nicel/nitel analizler ve pazar taraması ile stratejik karar süreçlerine veri desteği.",
+          "10 kişilik araştırma ekibinin koordinasyonu; görev planlama ve zamanında çıktı."
+        ]
+      }
+    ],
+    educationCards: [
+      { title:"TED Üniversitesi — Bilgisayar Mühendisliği (İngilizce)", body:"Yan Dal: Uygulamalı Veri Analitiği • Ankara, Türkiye" },
+      { title:"Ankara Atatürk Lisesi", body:"1 yıl yoğun İngilizce ve Almanca hazırlık • Ankara, Türkiye" }
+    ],
+    additionalHtml: `
+      <ul class="mb-0">
+        <li><b>Yarı Profesyonel Hentbol:</b> Şehir ve bölge düzeyinde müsabakalar; 2022 Uluslararası Alanya Plaj Hentbolu Turnuvası’nda ikincilik.</li>
+      </ul>
+    `,
+    volunteeringHtml: `
+      <ul class="mb-0">
+        <li><b>“Bana 2 Saat Ayırır Mısınız?”</b> projesi kapsamında otizmli çocuklarla birebir çalışma.</li>
+      </ul>
+    `,
+    contactLocation: "Ankara, Türkiye"
+  },
+  en: {
+    nav: { about:"About", focus:"Focus", experience:"Experience", projects:"Projects", education:"Education", contact:"Contact" },
+    hero: {
+      badge: "AI Engineer • Data Scientist",
+      title: "Building reliable AI for real-world impact.",
+      sub: "Production-grade machine learning across medical imaging, cybersecurity, fintech, and energy."
+    },
+    sections: { about:"Summary", focus:"Core Skills", experience:"Experience", projects:"Selected Projects", education:"Education", additional:"Additional Experience", volunteering:"Social Responsibility & Community Engagement", contact:"Contact" },
+    about:
+      "Applied AI Engineer with hands-on experience in 3D computer vision, NLP, and end-to-end machine learning systems. Specialized in 3D segmentation and advanced computer vision architectures, including defense-sector and medical imaging use cases. Proven track record in building production-ready ML pipelines, from data preparation to model development, validation, and deployment. Experience in bridging academic research with real-world production constraints and leading small research teams. Actively interested in applied AI systems with measurable real-world impact.",
+    focusCards: [
+      { title:"Artificial Intelligence & Machine Learning", body:"Deep learning, machine learning, end-to-end ML systems, model development & evaluation", tags:["Deep Learning","End-to-End ML","Evaluation"] },
+      { title:"Computer Vision", body:"2D/3D computer vision, 3D segmentation, object detection, medical imaging", tags:["3D Segmentation","Object Detection","Medical Imaging"] },
+      { title:"Systems & Deployment", body:"Embedded AI, microservices architectures, GPU acceleration, low-latency inference, FP16/INT8 optimization", tags:["Microservices","CUDA","TensorRT","FP16/INT8"] },
+      { title:"Programming & Frameworks", body:"Python, C++ (C++14/17), SQL; PyTorch, MONAI, OpenCV, scikit-learn", tags:["Python","C++","PyTorch","MONAI","SQL"] }
+    ],
+    experienceCards: [
+      {
+        title: "AI Engineer — IsıTech (Mar 2025 – Present) • Ankara, Turkey",
+        bullets: [
+          "Reduced manual 3D medical image segmentation time from 3–4 hours to ~1–2 minutes by designing and training end-to-end 3D segmentation models for clinical workflows.",
+          "Built a fully domestic 3D segmentation system achieving Dice scores up to 0.77 (tumor) and 0.70 (vascular structures) on a limited real-world dataset (~70 patients).",
+          "Designed task-specific 3D deep learning architectures optimized for real-world MRI variability under strict clinical accuracy constraints.",
+          "Developed an end-to-end AI pipeline covering data standardization, preprocessing, training, validation, deployment, and reporting.",
+          "Architected and deployed AI services using a microservices-based approach on cloud infrastructure.",
+          "Contributed to TUBITAK-funded R&D projects (system design, analysis, visualization, manuscript preparation)."
+        ]
+      },
+      {
+        title: "Data Scientist — Mono Payments (Jun 2024 – Dec 2024) • Remote, London (UK)",
+        bullets: [
+          "Led end-to-end data, ML, and database responsibilities for the Unipubs platform.",
+          "Extracted and cleaned heterogeneous data sources (user logs, transactions, visual product data).",
+          "Built ML models to analyze customer behavior, spending patterns, and temporal purchase trends.",
+          "Delivered data-driven recommendations influencing ad timing, product highlighting, and discount strategies.",
+          "Contributed to measurable improvements in clicks, session duration, basket visits, and sales."
+        ]
+      },
+      {
+        title: "Data Analyst Intern — TAM Finans Faktoring (Summer 2023) • Istanbul, Turkey",
+        bullets: [
+          "Analyzed real-time data streams from 40 branches to support sales and operations.",
+          "Evaluated the impact of interest rates, maturity periods, and campaign strategies on sales."
+        ]
+      }
+    ],
+    projectCards: [
+      {
+        title:"High-Performance Aerial Threat Detection & Telemetry Analysis System",
+        body:"Real-time threat detection and telemetry analysis for embedded defense environments under strict latency and memory constraints.",
+        bullets:[
+          "Custom binary telemetry decoder and in-house linear algebra engine for accurate 3D motion modeling.",
+          "High-performance C++ CV pipeline with object detection + Kalman filter tracking.",
+          "YOLO optimization with TensorRT/CUDA (FP16/INT8), 3–4× speedup targeting sub-ms latency."
+        ]
+      },
+      {
+        title:"PERSANAVI — Personalized Surgical Anatomy Viewer (TUBITAK)",
+        body:"3D deep learning for personalized surgical anatomy visualization.",
+        bullets:[
+          "Reduced manual segmentation from 3–4 hours to ~2 minutes via automated 3D segmentation.",
+          "Achieved Dice up to 0.77 (tumor) and 0.70 (vascular structures) on a limited dataset (~70).",
+          "Implemented a novel MRI-sequence–based tumor/vascular segmentation approach."
+        ]
+      },
+      {
+        title:"ShadowEye — AI-Driven Cybersecurity Platform",
+        body:"AI-powered detection of leaked data from dark web sources.",
+        bullets:[
+          "Created custom datasets via scraping + manual labeling.",
+          "Trained 360 models achieving 86% accuracy and 92.7% ROC-AUC.",
+          "Enabled near real-time breach detection (~5 minutes)."
+        ]
+      },
+      {
+        title:"Data-Driven Energy — Resilient & Sustainable Power Systems",
+        body:"Research project on commercialization of digital technologies in energy systems.",
+        bullets:[
+          "Conducted quantitative/qualitative analyses and market scanning to support strategic decisions.",
+          "Coordinated a 10-person research team for timely analytical outputs."
+        ]
+      }
+    ],
+    educationCards: [
+      { title:"TED University — B.S.E. in Computer Engineering (English)", body:"Minor: Applied Data Analytics • Ankara, Turkey" },
+      { title:"Ankara Atatürk High School", body:"One-year intensive English and German preparatory program • Ankara, Turkey" }
+    ],
+    additionalHtml: `
+      <ul class="mb-0">
+        <li><b>Semiprofessional Handball:</b> Competed at city and regional levels; 2nd place in the 2022 International Alanya Beach Handball Tournament.</li>
+      </ul>
+    `,
+    volunteeringHtml: `
+      <ul class="mb-0">
+        <li><b>“Can You Spare Me 2 Hours?”</b> Worked directly with children with autism through hands-on engagement.</li>
+      </ul>
+    `,
+    contactLocation: "Ankara, Turkey"
+  }
 };
 
+function escapeHtml(str){
+  return String(str)
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#039;");
+}
+
+function renderCard({title, body, tags, bullets}){
+  const tagsHtml = Array.isArray(tags) ? tags.map(t => `<span class="tag">${escapeHtml(t)}</span>`).join("") : "";
+  const bodyHtml = body ? `<p class="mt-1 mb-2">${escapeHtml(body)}</p>` : "";
+  const bulletsHtml = Array.isArray(bullets) ? `<ul class="mt-2 mb-0">${bullets.map(b => `<li>${escapeHtml(b)}</li>`).join("")}</ul>` : "";
+  return `
+    <div class="card p-3 mt-3">
+      <b>${escapeHtml(title)}</b>
+      ${bodyHtml}
+      ${bulletsHtml}
+      <div class="mt-2">${tagsHtml}</div>
+    </div>
+  `;
+}
+
 function setLang(lang){
-  document.getElementById("about-text").innerHTML = about[lang];
+  const c = content[lang] || content.en;
+  document.documentElement.setAttribute("lang", lang);
+
+  // nav
+  document.getElementById("nav-about").textContent = c.nav.about;
+  document.getElementById("nav-focus").textContent = c.nav.focus;
+  document.getElementById("nav-experience").textContent = c.nav.experience;
+  document.getElementById("nav-projects").textContent = c.nav.projects;
+  document.getElementById("nav-education").textContent = c.nav.education;
+  document.getElementById("nav-contact").textContent = c.nav.contact;
+
+  // hero
+  document.getElementById("hero-badge").textContent = c.hero.badge;
+  document.getElementById("hero-title").textContent = c.hero.title;
+  document.getElementById("hero-sub").textContent = c.hero.sub;
+
+  // section titles
+  document.getElementById("about-title").textContent = c.sections.about;
+  document.getElementById("focus-title").textContent = c.sections.focus;
+  document.getElementById("experience-title").textContent = c.sections.experience;
+  document.getElementById("projects-title").textContent = c.sections.projects;
+  document.getElementById("education-title").textContent = c.sections.education;
+  document.getElementById("additional-title").textContent = c.sections.additional;
+  document.getElementById("volunteering-title").textContent = c.sections.volunteering;
+  document.getElementById("contact-title").textContent = c.sections.contact;
+
+  // body content
+  document.getElementById("about-text").textContent = c.about;
+  document.getElementById("focus-cards").innerHTML = c.focusCards.map(renderCard).join("");
+  document.getElementById("experience-cards").innerHTML = c.experienceCards.map(renderCard).join("");
+  document.getElementById("project-cards").innerHTML = c.projectCards.map(renderCard).join("");
+  document.getElementById("education-cards").innerHTML = c.educationCards.map(renderCard).join("");
+  document.getElementById("additional-body").innerHTML = c.additionalHtml;
+  document.getElementById("volunteering-body").innerHTML = c.volunteeringHtml;
+  document.getElementById("contact-location").textContent = c.contactLocation;
 }
 setLang("en");
 
